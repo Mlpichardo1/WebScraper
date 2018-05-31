@@ -1,0 +1,11 @@
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/bin/Debug/netcoreapp2.1/myApp.deps.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/bin/Debug/netcoreapp2.1/myApp.runtimeconfig.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/bin/Debug/netcoreapp2.1/myApp.runtimeconfig.dev.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/bin/Debug/netcoreapp2.1/myApp.dll
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/bin/Debug/netcoreapp2.1/myApp.pdb
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.csprojAssemblyReference.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.csproj.CoreCompileInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.AssemblyInfoInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.AssemblyInfo.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.dll
+/Users/jennypichardo/Desktop/visProjects/WebScraper/DatabaseSample/myApp/obj/Debug/netcoreapp2.1/myApp.pdb

@@ -2,6 +2,21 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "EntityFramework/7.0.0-beta4": {
+        "type": "package",
+        "dependencies": {
+          "EntityFramework.Commands": "7.0.0-beta4"
+        }
+      },
+      "EntityFramework.Commands/7.0.0-beta4": {
+        "type": "package",
+        "compile": {
+          "lib/net451/EntityFramework.Commands.dll": {}
+        },
+        "runtime": {
+          "lib/net451/EntityFramework.Commands.dll": {}
+        }
+      },
       "Microsoft.NETCore.App/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -200,6 +215,43 @@
     }
   },
   "libraries": {
+    "EntityFramework/7.0.0-beta4": {
+      "sha512": "KTplgz4PBKb33t8O0I5S8yBwkU+l9PTymzoTVav8/FGikck55Amf28EOpOZAqnkGIzCGYD5/k26P7AmVyYyTHw==",
+      "type": "package",
+      "path": "entityframework/7.0.0-beta4",
+      "files": [
+        "caution.png",
+        "content/deleteme",
+        "entityframework.7.0.0-beta4.nupkg.sha512",
+        "entityframework.nuspec",
+        "readme.html",
+        "tools/install.ps1",
+        "yes.png"
+      ]
+    },
+    "EntityFramework.Commands/7.0.0-beta4": {
+      "sha512": "gPx5U4fQhLJHcertKOZLEja22rk/V5j3eGvXp3/umh8JAgnKDw+GhycCrZtXNd/b2X3MvCMUf7nLDX6+pg8/YQ==",
+      "type": "package",
+      "path": "entityframework.commands/7.0.0-beta4",
+      "files": [
+        "app/ef",
+        "app/ef.cmd",
+        "app/project.json",
+        "entityframework.commands.7.0.0-beta4.nupkg.sha512",
+        "entityframework.commands.nuspec",
+        "lib/dnx451/EntityFramework.Commands.dll",
+        "lib/dnx451/EntityFramework.Commands.xml",
+        "lib/dnxcore50/EntityFramework.Commands.dll",
+        "lib/dnxcore50/EntityFramework.Commands.xml",
+        "lib/net451/EntityFramework.Commands.dll",
+        "lib/net451/EntityFramework.Commands.xml",
+        "tools/EntityFramework.psd1",
+        "tools/EntityFramework.psm1",
+        "tools/Handlers.cs",
+        "tools/IHandlers.cs",
+        "tools/init.ps1"
+      ]
+    },
     "Microsoft.NETCore.App/2.0.0": {
       "sha512": "/mzXF+UtZef+VpzzN88EpvFq5U6z4rj54ZMq/J968H6pcvyLOmcupmTRpJ3CJm8ILoCGh9WI7qpDdiKtuzswrQ==",
       "type": "package",
@@ -660,6 +712,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "EntityFramework >= 7.0.0-beta4",
       "Microsoft.NETCore.App >= 2.0.0"
     ]
   },
@@ -702,6 +755,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "EntityFramework": {
+            "target": "Package",
+            "version": "[7.0.0-beta4, )"
+          },
           "Microsoft.NETCore.App": {
             "target": "Package",
             "version": "[2.0.0, )",
@@ -715,5 +772,17 @@
         "warn": true
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'EntityFramework.Commands 7.0.0-beta4' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "EntityFramework.Commands",
+      "targetGraphs": [
+        ".NETCoreApp,Version=v2.0"
+      ]
+    }
+  ]
 }
