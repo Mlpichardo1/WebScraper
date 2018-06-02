@@ -1,5 +1,6 @@
-using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
+using System;
+using Microsoft.EntityFrameworkCore.Sqlite;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace myApp
 {
