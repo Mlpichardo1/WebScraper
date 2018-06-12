@@ -1,0 +1,11 @@
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.csprojAssemblyReference.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.csproj.CoreCompileInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.AssemblyInfoInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.AssemblyInfo.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/WebScraperApp.deps.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/WebScraperApp.runtimeconfig.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/WebScraperApp.runtimeconfig.dev.json
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/WebScraperApp.dll
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/WebScraperApp.pdb
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.dll
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.pdb
