@@ -26,15 +26,19 @@ namespace WebScraperApp
             .Where(node => node.GetAttributeValue("data-test", "")
             .Equals("contentTable")).ToList();
             
-            // var stockListItems = stockHtml[0].Descendants("tr")
-            // .Where(node => node.GetAttributeValue("data-key", "")
-            // .Contains("")).ToList();
-            // // var stockList = stockHtml[0].Descendants()
+            var StockListItems = stockHtml[0].Descendants("tr")
+            .Where(node => node.GetAttributeValue("data-key", "")
+            .Contains("")).ToList();
+            // var stockList = stockHtml[0].Descendants()
 
-            // foreach (var stockListItem in stockListItems)
-            // {
-            //     System.Console.WriteLine(stockListItem.GetAttributeValue("data-key", ""));
-            // }
+            foreach (var StockListItem in StockListItems)
+            {
+                System.Console.WriteLine(StockListItem.GetAttributeValue("data-key", ""));
+
+                System.Console.WriteLine(StockListItem.Descendants("tr")
+                .Where(node => node.GetAttributeValue("class", "")
+                );
+            }
         }
     }
 }
