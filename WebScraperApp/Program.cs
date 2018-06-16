@@ -22,21 +22,22 @@ namespace WebScraperApp
             var htmlDocument = new HtmlDocument();
             htmlDocument.LoadHtml(html);
 
-            var stockHtml = htmlDocument.DocumentNode.Descendants("table")
-            .Where(node => node.GetAttributeValue("data-test", "")
-            .Equals("contentTable")).ToList();
+            var stockHtml = htmlDocument.DocumentNode.Descendants("div")
+            .Where(node => node.GetAttributeValue("id", "")
+            .Equals("_container_")).ToList();
             
-            var StockListItems = stockHtml[0].Descendants("tr")
-            .Where(node => node.GetAttributeValue("data-key", "")
-            .Contains("")).ToList();
+            var StockListItems = stockHtml[0].Descendants("section")
+            .Where(node => node.GetAttributeValue("data-test", "")
+            .Contains("tableContainer")).ToList();
             // var stockList = stockHtml[0].Descendants()
 
             foreach (var StockListItem in StockListItems)
             {
-                System.Console.WriteLine(StockListItem.GetAttributeValue("data-key", ""));
+                System.Console.WriteLine(StockListItem.GetAttributeValue("table", ""));
 
-                System.Console.WriteLine(StockListItem.Descendants("tr")
-                .Where(node => node.GetAttributeValue("class", "")
+                System.Console.WriteLine(StockListItem.Descendants("tbody")
+                .Where(node => node.GetAttributeValue("tr", "")
+                .Equals("data-key")).FirstOrDefault().InnerText.Trim('\r', '\n')
                 );
             }
         }
