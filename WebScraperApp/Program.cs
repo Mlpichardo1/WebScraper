@@ -35,6 +35,7 @@ namespace WebScraperApp
             {
                 System.Console.WriteLine(StockListItem.GetAttributeValue("table", ""));
 
+                // Stock Name
                 System.Console.WriteLine(StockListItem.Descendants("tbody")
                 .Where(node => node.GetAttributeValue("tr", "")
                 .Equals("data-key")).FirstOrDefault().InnerText.Trim('\r', '\n')
