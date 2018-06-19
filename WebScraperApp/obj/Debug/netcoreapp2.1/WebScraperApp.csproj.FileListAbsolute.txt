@@ -30,3 +30,7 @@
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.RazorTargetAssemblyInfo.cs
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.Views.pdb
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/WebScraperApp.csproj.CopyComplete
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/bin/Debug/netcoreapp2.1/app.db
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/UserSecretsAssemblyInfo.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/_ViewStart.g.cshtml.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_LoginPartial.g.cshtml.cs
