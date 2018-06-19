@@ -1,48 +1,24 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Net.Http;
-using HtmlAgilityPack;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.Logging;
 
 namespace WebScraperApp
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            GetHtmlAsync();
-            Console.ReadLine();
+            CreateWebHostBuilder(args).Build().Run();
         }
 
-        private static async void GetHtmlAsync()
-        {
-            var url = "https://finance.yahoo.com/portfolio/p_1/view/v1?bypass=true";
-            var httpClient = new HttpClient();
-            var html = await httpClient.GetStringAsync(url);
-
-            var htmlDocument = new HtmlDocument();
-            htmlDocument.LoadHtml(html);
-
-            var stockHtml = htmlDocument.DocumentNode.Descendants("div")
-            .Where(node => node.GetAttributeValue("id", "")
-            .Equals("_container_")).ToList();
-            
-            var StockListItems = stockHtml[0].Descendants("section")
-            .Where(node => node.GetAttributeValue("data-test", "")
-            .Contains("tableContainer")).ToList();
-            // var stockList = stockHtml[0].Descendants()
-
-            foreach (var StockListItem in StockListItems)
-            {
-                System.Console.WriteLine(StockListItem.GetAttributeValue("table", ""));
-
-                // Stock Name
-                System.Console.WriteLine(StockListItem.Descendants("tbody")
-                .Where(node => node.GetAttributeValue("tr", "")
-                .Equals("data-key")).FirstOrDefault().InnerText.Trim('\r', '\n')
-                );
-            }
-        }
+        public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+            WebHost.CreateDefaultBuilder(args)
+                .UseStartup<Startup>();
     }
 }
-
-
