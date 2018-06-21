@@ -15,5 +15,6 @@
     <PackageReference Include="HtmlAgilityPack" Version="1.8.4"/>
     <PackageReference Include="Selenium.Support" Version="3.12.1"/>
     <PackageReference Include="bootstrap" Version="4.1.1"/>
+    <PackageReference Include="ImageFormats" Version="1.0.0"/>
   </ItemGroup>
 </Project>
