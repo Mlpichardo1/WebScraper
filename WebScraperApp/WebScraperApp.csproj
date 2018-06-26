@@ -16,5 +16,8 @@
     <PackageReference Include="Selenium.Support" Version="3.12.1"/>
     <PackageReference Include="bootstrap" Version="4.1.1"/>
     <PackageReference Include="ImageFormats" Version="1.0.0"/>
+    <PackageReference Include="Dapper" Version="1.50.5"/>
+    <PackageReference Include="Scrappy" Version="0.1.27"/>
+    <PackageReference Include="ScrappyDB" Version="2.0.1.9"/>
   </ItemGroup>
 </Project>

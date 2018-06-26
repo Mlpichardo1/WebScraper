@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace WebScraperApp.Models
 {
     public class StockModel
@@ -16,13 +19,13 @@ namespace WebScraperApp.Models
             try 
             {
                 List<StockModel> stocks = new List<StockModel>();
-                string[] row =  csvData 
+                string[] row =  csvData
 
             }
             catch(Exception ex)
             {
                 // handle error
-                string error = ex.Message.toString();
+                string error = ex.Message.ToString();
             }
             return null;
         }
