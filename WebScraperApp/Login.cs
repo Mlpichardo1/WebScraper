@@ -9,6 +9,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Support.UI;
 using WebScraperApp.Data;
 
 
@@ -16,8 +17,9 @@ namespace WebScraperApp
 {
     public partial class Login
     {
-        public static void Main(string[] args)
+        public static void Run(string[] args)
         {
+            System.Console.WriteLine("Button Clicked");
             // Initialize the Chrome Driver
             using (var driver = new ChromeDriver())
             {
@@ -27,25 +29,43 @@ namespace WebScraperApp
                 // Get the page elements
                 var userName = driver.FindElementById("login-username");
                 var userLogin = driver.FindElementById("login-signin");
-                // var notRobot = driver.FindElementByClassName("recaptcha-checkbox-checkmark");
-                // var submit = driver.FindElementById("recaptcha-submit");
                 var userPassword = driver.FindElementById("login-passwd");
                 
                 // Type user name and password
                 userName.SendKeys("mnl.pichardo@yahoo.com");
                 userLogin.Click();
-                // notRobot.Click();
-                // submit.Click();
                 userPassword.SendKeys("Milkman0");
                 // Login 
                 userLogin.Click();
 
                 driver.Navigate().GoToUrl("https://finance.yahoo.com/portfolio/p_1/view/v2");
+            
 
-                // Take a screenshot and save it into screen.png
-                driver.GetScreenshot().SaveAsFile(@"screen.png", ScreenshotImageFormat.Png);
+        //      //Gets table body to 'myTable' instance
+        //     IWebElement myTable = driver.FindElement(By.XPath(""));
+            
+        //      //Getting Number of rows in table
+        //     IList<IWebElement> rows = new List<IWebElement>(myTable.FindElements(By.TagName("tr")));
+            
+        //     foreach (var colElement in rows)
+        //     {
+        //         //Getting Number of cols in row table
+        //         IList<IWebElement> cols = new List<IWebElement>(colElement.FindElements(By.TagName("td")));
+
+        //         if (cols.Count > 0) 
+        //         {
+        //             //Iterating through each cell
+
+        //             foreach (var cellData in cols)
+        //             {
+        //                 //getting each cell data
+        //                 String data = cellData.Text;
+        //                 Console.WriteLine("Data matched" + data);
+        //             }
+                }
             }
         }
-
-    }
+                // Take a screenshot and save it into screen.png
+                // driver.GetScreenshot().SaveAsFile(@"screen.png", ScreenshotImageFormat.Png);
 }
+

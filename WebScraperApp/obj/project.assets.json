@@ -2,15 +2,6 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "AWSSDK/1.4.8.1": {
-        "type": "package",
-        "compile": {
-          "lib/AWSSDK.dll": {}
-        },
-        "runtime": {
-          "lib/AWSSDK.dll": {}
-        }
-      },
       "bootstrap/4.1.1": {
         "type": "package",
         "dependencies": {
@@ -45,15 +36,6 @@
         },
         "runtime": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
-        }
-      },
-      "ImageFormats/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/net45/ImageFormats.dll": {}
-        },
-        "runtime": {
-          "lib/net45/ImageFormats.dll": {}
         }
       },
       "jQuery/3.0.0": {
@@ -2868,15 +2850,6 @@
           "lib/netstandard1.3/Newtonsoft.Json.Bson.dll": {}
         }
       },
-      "NLog/2.0.0.2000": {
-        "type": "package",
-        "compile": {
-          "lib/net40/NLog.dll": {}
-        },
-        "runtime": {
-          "lib/net40/NLog.dll": {}
-        }
-      },
       "NuGet.Frameworks/4.7.0-rtm.5148": {
         "type": "package",
         "dependencies": {
@@ -3118,26 +3091,6 @@
             "assetType": "native",
             "rid": "win-x86"
           }
-        }
-      },
-      "Scrappy/0.1.27": {
-        "type": "package"
-      },
-      "ScrappyDB/2.0.1.9": {
-        "type": "package",
-        "dependencies": {
-          "AWSSDK": "1.4.8.1",
-          "NLog": "2.0.0.2000"
-        },
-        "compile": {
-          "lib/Remotion.Linq.dll": {},
-          "lib/ScrappyDB.Linq.dll": {},
-          "lib/ScrappyDB.dll": {}
-        },
-        "runtime": {
-          "lib/Remotion.Linq.dll": {},
-          "lib/ScrappyDB.Linq.dll": {},
-          "lib/ScrappyDB.dll": {}
         }
       },
       "Selenium.Chrome.WebDriver/2.40.0": {
@@ -4913,16 +4866,6 @@
     }
   },
   "libraries": {
-    "AWSSDK/1.4.8.1": {
-      "sha512": "fTz1IkTpT/e4T7OhwjbivD/MZww2jIMDFN6JEYFAxoXUyW+BTTrZvuGUdR77QZDYfanalNl+yhvi4I2U+VKffA==",
-      "type": "package",
-      "path": "awssdk/1.4.8.1",
-      "files": [
-        "awssdk.1.4.8.1.nupkg.sha512",
-        "awssdk.nuspec",
-        "lib/AWSSDK.dll"
-      ]
-    },
     "bootstrap/4.1.1": {
       "sha512": "GAW8nugGorUxJRAIYrJ69tantpLlosqABI2cen74ipe3XbllvV2efdskNLXlt9vpsKL6JZjopLN56ib7R2cmJA==",
       "type": "package",
@@ -5011,16 +4954,6 @@
         "lib/uap10.0/HtmlAgilityPack.dll",
         "lib/uap10.0/HtmlAgilityPack.pdb",
         "lib/uap10.0/HtmlAgilityPack.pri"
-      ]
-    },
-    "ImageFormats/1.0.0": {
-      "sha512": "MPQH9oTqv2bhQhhWL5U1CrUdC2KxCezLODf8yfPFSaldTmKuF2O/+pA1MxGGHPkfgiF96bh37n/KfEWAcHKTLg==",
-      "type": "package",
-      "path": "imageformats/1.0.0",
-      "files": [
-        "imageformats.1.0.0.nupkg.sha512",
-        "imageformats.nuspec",
-        "lib/net45/ImageFormats.dll"
       ]
     },
     "jQuery/3.0.0": {
@@ -7963,31 +7896,6 @@
         "newtonsoft.json.bson.nuspec"
       ]
     },
-    "NLog/2.0.0.2000": {
-      "sha512": "8f3YgIYjtS3u917eiEG2SefB3jh9/qcs4DA+tjJaFXf4GH4UOZzsMukBNWa1XtX2MuVYb1LZ7ljcSuyBU4WykA==",
-      "type": "package",
-      "path": "nlog/2.0.0.2000",
-      "files": [
-        "lib/net20/NLog.dll",
-        "lib/net20/NLog.xml",
-        "lib/net35/NLog.dll",
-        "lib/net35/NLog.xml",
-        "lib/net40/NLog.dll",
-        "lib/net40/NLog.xml",
-        "lib/sl2/NLog.dll",
-        "lib/sl2/NLog.xml",
-        "lib/sl3-wp/NLog.dll",
-        "lib/sl3-wp/NLog.xml",
-        "lib/sl3/NLog.dll",
-        "lib/sl3/NLog.xml",
-        "lib/sl4-windowsphone71/NLog.dll",
-        "lib/sl4-windowsphone71/NLog.xml",
-        "lib/sl4/NLog.dll",
-        "lib/sl4/NLog.xml",
-        "nlog.2.0.0.2000.nupkg.sha512",
-        "nlog.nuspec"
-      ]
-    },
     "NuGet.Frameworks/4.7.0-rtm.5148": {
       "sha512": "hmWi7oVNV397Luu7CQwCs/Ctxld+sMLUw9uxRBqVODpvDx1y0M+63sBe4Fh5n0urHRRsIlT/++FNj/UVZLz/Tw==",
       "type": "package",
@@ -8303,30 +8211,6 @@
         "runtimes/win-x86/native/sni.dll",
         "useSharedDesignerContext.txt",
         "version.txt"
-      ]
-    },
-    "Scrappy/0.1.27": {
-      "sha512": "53RqeDI8PdC9JBrJFaxFiRBc5lfZBcwMQwKBgfBcOpnG8o8adp5tFt5kRXF7P1LTCK6usR88LuuaGSfi8QU85g==",
-      "type": "package",
-      "path": "scrappy/0.1.27",
-      "files": [
-        "lib/net462/Scrappy.dll",
-        "lib/net462/Scrappy.pdb",
-        "scrappy.0.1.27.nupkg.sha512",
-        "scrappy.nuspec"
-      ]
-    },
-    "ScrappyDB/2.0.1.9": {
-      "sha512": "Rc2rEAW9LlJ5jJl5+Q4UhAc0/8pTBHp8GMpeWhI6/d3aq/hoPyhZOVlKdQWibFmvzxRMxnOoio8meQDxKu7kmA==",
-      "type": "package",
-      "path": "scrappydb/2.0.1.9",
-      "files": [
-        "lib/Remotion.Linq.dll",
-        "lib/ScrappyDB.Linq.dll",
-        "lib/ScrappyDB.dll",
-        "scrappydb.2.0.1.9.nupkg.sha512",
-        "scrappydb.nuspec",
-        "tools/install.ps1"
       ]
     },
     "Selenium.Chrome.WebDriver/2.40.0": {
@@ -12945,13 +12829,10 @@
     ".NETCoreApp,Version=v2.1": [
       "Dapper >= 1.50.5",
       "HtmlAgilityPack >= 1.8.4",
-      "ImageFormats >= 1.0.0",
       "Microsoft.AspNetCore.App >= 2.1.0",
       "Microsoft.EntityFrameworkCore.Sqlite >= 2.1.0",
       "Microsoft.NETCore.App >= 2.1.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.1.0",
-      "Scrappy >= 0.1.27",
-      "ScrappyDB >= 2.0.1.9",
       "Selenium.Chrome.WebDriver >= 2.40.0",
       "Selenium.Support >= 3.12.1",
       "Selenium.WebDriver >= 3.12.1",
@@ -13005,10 +12886,6 @@
             "target": "Package",
             "version": "[1.8.4, )"
           },
-          "ImageFormats": {
-            "target": "Package",
-            "version": "[1.0.0, )"
-          },
           "Microsoft.AspNetCore.App": {
             "suppressParent": "All",
             "target": "Package",
@@ -13028,14 +12905,6 @@
             "suppressParent": "All",
             "target": "Package",
             "version": "[2.1.0, )"
-          },
-          "Scrappy": {
-            "target": "Package",
-            "version": "[0.1.27, )"
-          },
-          "ScrappyDB": {
-            "target": "Package",
-            "version": "[2.0.1.9, )"
           },
           "Selenium.Chrome.WebDriver": {
             "target": "Package",
@@ -13061,56 +12930,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'AWSSDK 1.4.8.1' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "AWSSDK",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ImageFormats 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "ImageFormats",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'NLog 2.0.0.2000' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "NLog",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'ScrappyDB 2.0.1.9' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.1'. This package may not be fully compatible with your project.",
-      "libraryId": "ScrappyDB",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    },
-    {
-      "code": "NU1202",
-      "level": "Error",
-      "message": "Package Scrappy 0.1.27 is not compatible with netcoreapp2.1 (.NETCoreApp,Version=v2.1). Package Scrappy 0.1.27 supports: net462 (.NETFramework,Version=v4.6.2)",
-      "libraryId": "Scrappy",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.1"
-      ]
-    }
-  ]
+  }
 }

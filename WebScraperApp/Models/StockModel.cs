@@ -1,35 +1,14 @@
 using System;
-using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace WebScraperApp.Models
 {
     public class StockModel
     {
-        public string Symbol {get; set;}
-        public decimal AverageVolume {get; set;}
-        public decimal ListTradePrice {get; set;}
-
-
-    }
-
-    public static class YahooFinance
-    {
-        public static List<StockModel> Parse(string csvData)
-        {
-            try 
-            {
-                List<StockModel> stocks = new List<StockModel>();
-                string[] row =  csvData
-
-            }
-            catch(Exception ex)
-            {
-                // handle error
-                string error = ex.Message.ToString();
-            }
-            return null;
-        }
-
-
+        public Guid Id { get; set; }
+        public bool IsDone { get; set; }
+        [Required]
+        public string Title { get; set; }
+        public DateTimeOffset? DueAt { get; set; }
     }
 }

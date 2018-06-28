@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "f518f3f15b991a3d711dc94be7afa0c74c15b654"
+    "signature": "e64036fe53fe8e71ffef4677545b38063f0df384"
   },
   "compilationOptions": {
     "defines": [
@@ -24,8 +24,8 @@
     ".NETCoreApp,Version=v2.1": {
       "WebScraperApp/1.0.0": {
         "dependencies": {
+          "Dapper": "1.50.5",
           "HtmlAgilityPack": "1.8.4",
-          "ImageFormats": "1.0.0",
           "Microsoft.AspNetCore.App": "2.1.0",
           "Microsoft.EntityFrameworkCore.Sqlite": "2.1.0",
           "Microsoft.NETCore.App": "2.1.0",
@@ -48,6 +48,22 @@
           "popper.js": "1.14.0"
         }
       },
+      "Dapper/1.50.5": {
+        "dependencies": {
+          "System.Data.SqlClient": "4.5.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0"
+        },
+        "runtime": {
+          "lib/netstandard2.0/Dapper.dll": {
+            "assemblyVersion": "1.50.5.0",
+            "fileVersion": "1.50.5.0"
+          }
+        },
+        "compile": {
+          "lib/netstandard2.0/Dapper.dll": {}
+        }
+      },
       "HtmlAgilityPack/1.8.4": {
         "dependencies": {
           "System.Net.Http": "4.3.2",
@@ -63,17 +79,6 @@
         },
         "compile": {
           "lib/netstandard2.0/HtmlAgilityPack.dll": {}
-        }
-      },
-      "ImageFormats/1.0.0": {
-        "runtime": {
-          "lib/net45/ImageFormats.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        },
-        "compile": {
-          "lib/net45/ImageFormats.dll": {}
         }
       },
       "jQuery/3.0.0": {},
@@ -786,6 +791,7 @@
           "System.Runtime.Handles": "4.3.0"
         }
       },
+      "System.Reflection.TypeExtensions/4.4.0": {},
       "System.Xml.XPath.XmlDocument/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
@@ -2095,7 +2101,7 @@
           "System.Collections": "4.3.0",
           "System.IO": "4.3.0",
           "System.IO.FileSystem": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Runtime.InteropServices": "4.3.0",
           "System.Runtime.InteropServices.RuntimeInformation": "4.3.0"
@@ -2980,7 +2986,7 @@
           "System.Reflection.Emit": "4.3.0",
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3115,7 +3121,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3171,7 +3177,7 @@
           "System.Reflection.Emit.Lightweight": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3241,13 +3247,6 @@
         "dependencies": {
           "Microsoft.NETCore.Platforms": "2.1.0",
           "Microsoft.NETCore.Targets": "2.1.0",
-          "System.Runtime": "4.3.0"
-        },
-        "compileOnly": true
-      },
-      "System.Reflection.TypeExtensions/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         },
         "compileOnly": true
@@ -3673,7 +3672,7 @@
           "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
-          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.4.0",
           "System.Resources.ResourceManager": "4.3.0",
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
@@ -3727,19 +3726,19 @@
       "path": "bootstrap/4.1.1",
       "hashPath": "bootstrap.4.1.1.nupkg.sha512"
     },
+    "Dapper/1.50.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-1vPpX7WQmQCIb7rwlGOUoVs/yWZhVKvdhuG7WrJV+V+qsP8btnrrCqVWHENAlJxBAnUw5rhWfmuba9/Egei9MA==",
+      "path": "dapper/1.50.5",
+      "hashPath": "dapper.1.50.5.nupkg.sha512"
+    },
     "HtmlAgilityPack/1.8.4": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-gzla2yw6Ic7xk9Hrjb4S7HQvSvHyB5rQH1Tbl3OrxrOBcUVAKrvfL4ZvYm2RGwZuON6ukdZHHCKRnx/VEjuabw==",
       "path": "htmlagilitypack/1.8.4",
       "hashPath": "htmlagilitypack.1.8.4.nupkg.sha512"
-    },
-    "ImageFormats/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-MPQH9oTqv2bhQhhWL5U1CrUdC2KxCezLODf8yfPFSaldTmKuF2O/+pA1MxGGHPkfgiF96bh37n/KfEWAcHKTLg==",
-      "path": "imageformats/1.0.0",
-      "hashPath": "imageformats.1.0.0.nupkg.sha512"
     },
     "jQuery/3.0.0": {
       "type": "package",
@@ -4027,6 +4026,13 @@
       "sha512": "sha512-qOu+hDwFwoZPbzPvwut2qATe3ygjeQBDQj91xlsaqGFQUI5i4ZnZb8yyQuLGpDGivEPIt8EJkd1BVzVoP31FXA==",
       "path": "system.net.primitives/4.3.0",
       "hashPath": "system.net.primitives.4.3.0.nupkg.sha512"
+    },
+    "System.Reflection.TypeExtensions/4.4.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-dkmh/ySlwnXJp/1qYP9uyKkCK1CXR/REFzl7abHcArxBcV91mY2CgrrzSRA5Z/X4MevJWwXsklGRdR3A7K9zbg==",
+      "path": "system.reflection.typeextensions/4.4.0",
+      "hashPath": "system.reflection.typeextensions.4.4.0.nupkg.sha512"
     },
     "System.Xml.XPath.XmlDocument/4.3.0": {
       "type": "package",
@@ -5609,13 +5615,6 @@
       "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.TypeExtensions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-7u6ulLcZbyxB5Gq0nMkQttcdBTx57ibzw+4IOXEfR+sXYQoHvjW5LTLyNr8O22UIMrqYbchJQJnos4eooYzYJA==",
-      "path": "system.reflection.typeextensions/4.3.0",
-      "hashPath": "system.reflection.typeextensions.4.3.0.nupkg.sha512"
     },
     "System.Resources.ResourceManager/4.3.0": {
       "type": "package",
