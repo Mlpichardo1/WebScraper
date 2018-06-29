@@ -5,7 +5,7 @@ using WebScraperApp.Models;
 
 namespace WebScraperApp.Services
 {
-    public interface StockItemService
+    public interface IStockItemService
     {
         Task<StockItem[]> GetIncompleteItemsAsync();
     }

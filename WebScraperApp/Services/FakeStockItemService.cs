@@ -5,16 +5,16 @@ using WebScraperApp.Models;
 
 namespace WebScraperApp.Services
 {
-    public interface FakeStockItemService
+    public class FakeStockItemService : IStockItemService
     {
          public Task<StockItem[]> GetIncompleteItemsAsync()
         {
-            var item1 = new TodoItem
+            var item1 = new StockItem
             {
                 Title = "Learn ASP.NET Core",
                 DueAt = DateTimeOffset.Now.AddDays(1)
             };
-        var item2 = new TodoItem
+            var item2 = new StockItem
             {
                 Title = "Build awesome apps",
                 DueAt = DateTimeOffset.Now.AddDays(2)

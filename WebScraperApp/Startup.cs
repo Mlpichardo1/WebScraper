@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using WebScraperApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebScraperApp.Services;
 
 namespace WebScraperApp
 {
