@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace WebScraperApp.Models
 {
-    public class StockModel
+    public class StockItem
     {
         public Guid Id { get; set; }
         public bool IsDone { get; set; }
