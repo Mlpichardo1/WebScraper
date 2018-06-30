@@ -8,5 +8,6 @@ namespace WebScraperApp.Services
     public interface IStockItemService
     {
         Task<StockItem[]> GetIncompleteItemsAsync();
+        Task<bool> AddItemAsync(StockItem newItem);
     }
 }

@@ -16,5 +16,6 @@
     <PackageReference Include="Selenium.Support" Version="3.12.1"/>
     <PackageReference Include="bootstrap" Version="4.1.1"/>
     <PackageReference Include="Dapper" Version="1.50.5"/>
+    <PackageReference Include="Humanizer" Version="2.3.3"/>
   </ItemGroup>
 </Project>

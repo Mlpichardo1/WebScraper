@@ -11,4 +11,5 @@ namespace WebScraperApp.Models
         public string Title { get; set; }
         public DateTimeOffset? DueAt { get; set; }
     }
+    
 }

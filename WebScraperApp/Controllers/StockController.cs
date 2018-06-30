@@ -20,6 +20,21 @@ namespace WebScraperApp.Controllers
                 Items = items
             };
                 return View(model);
+            
+        }
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> AddItem(StockItem newItem)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("Index");
             }
+            var successful = await _stockItemService.AddItemAsync(newItem);
+            if (!successful)
+            {
+                return BadRequest("Could not add item.");
+            }
+            return RedirectToAction("Index");
+        }
     }
 }

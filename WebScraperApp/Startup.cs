@@ -41,7 +41,7 @@ namespace WebScraperApp
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddSingleton<IStockItemService, FakeStockItemService>();
+            services.AddScoped<IStockItemService, StockItemService>();
             // services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
