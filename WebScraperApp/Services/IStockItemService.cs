@@ -9,5 +9,6 @@ namespace WebScraperApp.Services
     {
         Task<StockItem[]> GetIncompleteItemsAsync();
         Task<bool> AddItemAsync(StockItem newItem);
+        Task<bool> MarkDoneAsync(Guid id);
     }
 }
