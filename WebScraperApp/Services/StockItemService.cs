@@ -30,7 +30,7 @@ namespace WebScraperApp.Services
             return saveResult == 1;
         }
 
-        public Task<bool> MarkDoneAsync(Guid id)
+        public async Task<bool> MarkDoneAsync(Guid id)
         {
             var item = await _context.Items
                 .Where(x => x.Id == id)
