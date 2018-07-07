@@ -1,11 +1,13 @@
 using System;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using WebScraperApp.Models;
 using WebScraperApp.Services;
 
 namespace WebScraperApp.Controllers
 {
+    [Authorize]
     public class StockController : Controller
     {
         private readonly IStockItemService _stockItemService;
