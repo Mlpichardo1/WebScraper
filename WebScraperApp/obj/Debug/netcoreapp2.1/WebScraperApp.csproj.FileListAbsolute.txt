@@ -35,3 +35,4 @@
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Areas/Identity/Pages/_ViewStart.g.cshtml.cs
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_LoginPartial.g.cshtml.cs
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Stock/Index.g.cshtml.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Stock/AddItemPartial.g.cshtml.cs

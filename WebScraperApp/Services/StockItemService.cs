@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using WebScraperApp.Data;
 using WebScraperApp.Models;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Identity;
 
 namespace WebScraperApp.Services
 {
@@ -14,7 +15,7 @@ namespace WebScraperApp.Services
         {
             _context = context;
         }   
-        public async Task<StockItem[]> GetIncompleteItemsAsync()
+        public async Task<StockItem[]> GetIncompleteItemsAsync(IdentityUser user)
         {
             return await _context.Items
                 .Where(x => x.IsDone == false)

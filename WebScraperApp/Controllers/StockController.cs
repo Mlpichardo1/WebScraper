@@ -1,6 +1,7 @@
 using System;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using WebScraperApp.Models;
 using WebScraperApp.Services;
@@ -11,19 +12,25 @@ namespace WebScraperApp.Controllers
     public class StockController : Controller
     {
         private readonly IStockItemService _stockItemService;
-            public StockController(IStockItemService stockItemService)
+        private readonly UserManager<IdentityUser> _userManager;
+            public StockController(IStockItemService stockItemService, 
+            UserManager<IdentityUser> userManager)
             {
                 _stockItemService = stockItemService;
+                _userManager = userManager;
             }
         public async Task<IActionResult> Index()
         {
-            var items = await _stockItemService.GetIncompleteItemsAsync();
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null) return Challenge();
+
+            var items = await _stockItemService
+            .GetIncompleteItemsAsync(currentUser);
             var model = new StockViewModel()
             {
                 Items = items
             };
                 return View(model);
-            
         }
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> AddItem(StockItem newItem)
@@ -32,6 +39,9 @@ namespace WebScraperApp.Controllers
             {
                 return RedirectToAction("Index");
             }
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null) return Challenge();
+
             var successful = await _stockItemService.AddItemAsync(newItem);
             if (!successful)
             {
@@ -46,6 +56,9 @@ namespace WebScraperApp.Controllers
             {
                 return RedirectToAction("Index");
             }
+            var currentUser = await _userManager.GetUserAsync(User);
+            if (currentUser == null) return Challenge();
+
             var successful = await _stockItemService.MarkDoneAsync(id);
             if (!successful)
             {
