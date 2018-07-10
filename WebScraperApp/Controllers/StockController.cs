@@ -42,7 +42,7 @@ namespace WebScraperApp.Controllers
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Challenge();
 
-            var successful = await _stockItemService.AddItemAsync(newItem);
+            var successful = await _stockItemService.AddItemAsync(newItem, currentUser);
             if (!successful)
             {
                 return BadRequest("Could not add item.");
@@ -59,7 +59,7 @@ namespace WebScraperApp.Controllers
             var currentUser = await _userManager.GetUserAsync(User);
             if (currentUser == null) return Challenge();
 
-            var successful = await _stockItemService.MarkDoneAsync(id);
+            var successful = await _stockItemService.MarkDoneAsync(id, currentUser);
             if (!successful)
             {
                 return BadRequest("Could not mark item as done.");

@@ -21,17 +21,18 @@ namespace WebScraperApp.Services
                 .Where(x => x.IsDone == false)
                 .ToArrayAsync();
         }
-        public async Task<bool> AddItemAsync(StockItem newItem)
+        public async Task<bool> AddItemAsync(StockItem newItem, IdentityUser user)
         {
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
             newItem.DueAt = DateTimeOffset.Now.AddDays(3);
+            newItem.UserId = user.Id;
             _context.Items.Add(newItem);
             var saveResult = await _context.SaveChangesAsync();
             return saveResult == 1;
         }
 
-        public async Task<bool> MarkDoneAsync(Guid id)
+        public async Task<bool> MarkDoneAsync(Guid id, IdentityUser user)
         {
             var item = await _context.Items
                 .Where(x => x.Id == id)

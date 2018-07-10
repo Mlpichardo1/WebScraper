@@ -9,7 +9,7 @@ namespace WebScraperApp.Services
     public interface IStockItemService
     {
         Task<StockItem[]> GetIncompleteItemsAsync(IdentityUser user);
-        Task<bool> AddItemAsync(StockItem newItem);
-        Task<bool> MarkDoneAsync(Guid id);
+        Task<bool> AddItemAsync(StockItem newItem, IdentityUser user);
+        Task<bool> MarkDoneAsync(Guid id, IdentityUser user);
     }
 }
