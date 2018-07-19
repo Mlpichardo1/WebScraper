@@ -15,13 +15,13 @@ namespace WebScraperApp.Services
         {
             _context = context;
         }   
-        public async Task<StockItem[]> GetIncompleteItemsAsync(IdentityUser user)
+        public async Task<StockItem[]> GetIncompleteItemsAsync(ApplicationUser user)
         {
             return await _context.Items
                 .Where(x => x.IsDone == false)
                 .ToArrayAsync();
         }
-        public async Task<bool> AddItemAsync(StockItem newItem, IdentityUser user)
+        public async Task<bool> AddItemAsync(StockItem newItem, ApplicationUser user)
         {
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
@@ -32,7 +32,7 @@ namespace WebScraperApp.Services
             return saveResult == 1;
         }
 
-        public async Task<bool> MarkDoneAsync(Guid id, IdentityUser user)
+        public async Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
         {
             var item = await _context.Items
                 .Where(x => x.Id == id)

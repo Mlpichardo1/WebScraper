@@ -36,8 +36,8 @@ namespace WebScraperApp
             });
 
             // services.AddIdentity<ApplicationUser, IdentityRole>()
-                //.AddEntityFrameworkStores<ApplicationDbContext>()
-                //.AddDefaultTokenProviders();
+            //     .AddEntityFrameworkStores<ApplicationDbContext>()
+            //     .AddDefaultTokenProviders();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(

@@ -18,7 +18,7 @@ namespace WebScraperApp
             .GetRequiredService<RoleManager<IdentityRole>>();
             await EnsureRolesAsync(roleManager);
             var userManager = services
-            .GetRequiredService<UserManager<IdentityUser>>(
+            .GetRequiredService<UserManager<ApplicationUser>>(
             );
             await EnsureTestAdminAsync(userManager);
         }
@@ -33,13 +33,13 @@ namespace WebScraperApp
         }    
 
         private static async Task EnsureTestAdminAsync(
-        UserManager<IdentityUser> userManager)
+        UserManager<ApplicationUser> userManager)
         {
         var testAdmin = await userManager.Users
         .Where(x => x.UserName == "admin@todo.local")
         .SingleOrDefaultAsync();
         if (testAdmin != null) return;
-        testAdmin = new IdentityUser
+        testAdmin = new ApplicationUser
             {
                 UserName = "admin@todo.local",
                 Email = "admin@todo.local"

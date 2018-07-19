@@ -12,9 +12,9 @@ namespace WebScraperApp.Controllers
     public class StockController : Controller
     {
         private readonly IStockItemService _stockItemService;
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
             public StockController(IStockItemService stockItemService, 
-            UserManager<IdentityUser> userManager)
+            UserManager<ApplicationUser> userManager)
             {
                 _stockItemService = stockItemService;
                 _userManager = userManager;

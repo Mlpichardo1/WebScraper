@@ -36,3 +36,4 @@
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Shared/_LoginPartial.g.cshtml.cs
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Stock/Index.g.cshtml.cs
 /Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/Stock/AddItemPartial.g.cshtml.cs
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp/obj/Debug/netcoreapp2.1/Razor/Views/ManageUsers/Index.g.cshtml.cs

@@ -8,8 +8,8 @@ namespace WebScraperApp.Services
 {
     public interface IStockItemService
     {
-        Task<StockItem[]> GetIncompleteItemsAsync(IdentityUser user);
-        Task<bool> AddItemAsync(StockItem newItem, IdentityUser user);
-        Task<bool> MarkDoneAsync(Guid id, IdentityUser user);
+        Task<StockItem[]> GetIncompleteItemsAsync(ApplicationUser user);
+        Task<bool> AddItemAsync(StockItem newItem, ApplicationUser user);
+        Task<bool> MarkDoneAsync(Guid id, ApplicationUser user);
     }
 }

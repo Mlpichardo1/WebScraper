@@ -12,9 +12,9 @@ namespace WebScraperApp.Controllers
     [Authorize(Roles = "Administrator")]
     public class ManageUsersController : Controller
     {
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<ApplicationUser> _userManager;
         public ManageUsersController(
-        UserManager<IdentityUser> userManager)
+        UserManager<ApplicationUser> userManager)
         {
             _userManager = userManager;
         }
