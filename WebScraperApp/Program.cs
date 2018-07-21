@@ -45,6 +45,5 @@ namespace WebScraperApp
             WebHost.CreateDefaultBuilder(args)
                 .UseStartup<Startup>()
                 .Build();
-        
     }
 }

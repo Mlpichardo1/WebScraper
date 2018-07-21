@@ -30,6 +30,7 @@ namespace WebScraperApp
                 var userName = driver.FindElementById("login-username");
                 var userLogin = driver.FindElementById("login-signin");
                 var userPassword = driver.FindElementById("login-passwd");
+                var userPort = driver.FindElementById("");
                 
                 // Type user name and password
                 userName.SendKeys("mnl.pichardo@yahoo.com");
@@ -37,8 +38,9 @@ namespace WebScraperApp
                 userPassword.SendKeys("Milkman0");
                 // Login 
                 userLogin.Click();
+                userPort.Click();
 
-                driver.Navigate().GoToUrl("https://finance.yahoo.com/portfolio/p_1/view/v2");
+
             
 
         //      //Gets table body to 'myTable' instance

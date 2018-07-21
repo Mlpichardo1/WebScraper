@@ -86,7 +86,7 @@ ViewData["Title"] = "View your Stock Portfolio";
             WriteLiteral("    <tr>\n        <td>\n            ");
             EndContext();
             BeginContext(378, 189, false);
-            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "ae74f6e55c54445f8813200057b83515", async() => {
+            __tagHelperExecutionContext = __tagHelperScopeManager.Begin("form", global::Microsoft.AspNetCore.Razor.TagHelpers.TagMode.StartTagAndEndTag, "288b47960dce493da332e732b76a9b88", async() => {
                 BeginContext(420, 109, true);
                 WriteLiteral("\n                <input type=\"checkbox\" class=\"done-checkbox\">\n                <input type=\"hidden\" name=\"id\"");
                 EndContext();

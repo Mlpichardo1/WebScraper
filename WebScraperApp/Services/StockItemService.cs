@@ -27,7 +27,9 @@ namespace WebScraperApp.Services
             newItem.IsDone = false;
             newItem.DueAt = DateTimeOffset.Now.AddDays(3);
             newItem.UserId = user.Id;
+
             _context.Items.Add(newItem);
+            
             var saveResult = await _context.SaveChangesAsync();
             return saveResult == 1;
         }

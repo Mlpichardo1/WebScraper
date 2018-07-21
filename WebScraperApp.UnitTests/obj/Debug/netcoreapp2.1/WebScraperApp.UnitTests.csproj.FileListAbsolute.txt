@@ -1,0 +1,4 @@
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp.UnitTests/obj/Debug/netcoreapp2.1/WebScraperApp.UnitTests.csprojAssemblyReference.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp.UnitTests/obj/Debug/netcoreapp2.1/WebScraperApp.UnitTests.csproj.CoreCompileInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp.UnitTests/obj/Debug/netcoreapp2.1/WebScraperApp.UnitTests.AssemblyInfoInputs.cache
+/Users/jennypichardo/Desktop/visProjects/WebScraper/WebScraperApp.UnitTests/obj/Debug/netcoreapp2.1/WebScraperApp.UnitTests.AssemblyInfo.cs
