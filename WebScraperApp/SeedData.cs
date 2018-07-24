@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.AspNetCore.WebSockets.Internal;
 using System.Linq;
+using WebScraperApp.Controllers;
 
 namespace WebScraperApp
 {

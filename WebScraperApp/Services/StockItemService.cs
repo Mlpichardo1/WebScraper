@@ -5,6 +5,7 @@ using WebScraperApp.Data;
 using WebScraperApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
+using WebScraperApp.Controllers;
 
 namespace WebScraperApp.Services
 {
@@ -15,26 +16,23 @@ namespace WebScraperApp.Services
         {
             _context = context;
         }   
-        public async Task<StockItem[]> GetIncompleteItemsAsync(ApplicationUser user)
+        public async Task<StockItem[]> GetIncompleteItemsAsync()
         {
             return await _context.Items
                 .Where(x => x.IsDone == false)
                 .ToArrayAsync();
         }
-        public async Task<bool> AddItemAsync(StockItem newItem, ApplicationUser user)
+        public async Task<bool> AddItemAsync(StockItem newItem)
         {
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
             newItem.DueAt = DateTimeOffset.Now.AddDays(3);
-            newItem.UserId = user.Id;
-
             _context.Items.Add(newItem);
-            
             var saveResult = await _context.SaveChangesAsync();
             return saveResult == 1;
         }
 
-        public async Task<bool> MarkDoneAsync(Guid id, ApplicationUser user)
+        public async Task<bool> MarkDoneAsync(Guid id)
         {
             var item = await _context.Items
                 .Where(x => x.Id == id)
