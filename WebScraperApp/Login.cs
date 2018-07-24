@@ -17,28 +17,28 @@ namespace WebScraperApp
 {
     public partial class Login
     {
-//         public static void Run(string[] args)
-//         {
-//             System.Console.WriteLine("Button Clicked");
-//             // Initialize the Chrome Driver
-//             using (var driver = new ChromeDriver())
-//             {
-//                 // Go to the home page
-//                 driver.Navigate().GoToUrl("https://login.yahoo.com/");
+        public static void Run(string[] args)
+        {
+            System.Console.WriteLine("Button Clicked");
+            // Initialize the Chrome Driver
+            using (var driver = new ChromeDriver())
+            {
+                // Go to the home page
+                driver.Navigate().GoToUrl("https://login.yahoo.com/");
 
-//                 // Get the page elements
-//                 var userName = driver.FindElementById("login-username");
-//                 var userLogin = driver.FindElementById("login-signin");
-//                 var userPassword = driver.FindElementById("login-passwd");
-//                 var userPort = driver.FindElementById("");
+                // Get the page elements
+                var userName = driver.FindElementById("login-username");
+                var userLogin = driver.FindElementById("login-signin");
+                var userPassword = driver.FindElementById("login-passwd");
+                var userPort = driver.FindElementById("");
                 
-//                 // Type user name and password
-//                 userName.SendKeys("mnl.pichardo@yahoo.com");
-//                 userLogin.Click();
-//                 userPassword.SendKeys("Milkman0");
-//                 // Login 
-//                 userLogin.Click();
-//                 userPort.Click();
+                // Type user name and password
+                userName.SendKeys("mnl.pichardo@yahoo.com");
+                userLogin.Click();
+                userPassword.SendKeys("Milkman0");
+                // Login 
+                userLogin.Click();
+                userPort.Click();
 
 //         //      //Gets table body to 'myTable' instance
 //         //     IWebElement myTable = driver.FindElement(By.XPath(""));
@@ -61,8 +61,8 @@ namespace WebScraperApp
 //         //                 String data = cellData.Text;
 //         //                 Console.WriteLine("Data matched" + data);
 //         //             }
-//                 }
-//             }
+                }
+            }
         }
 //                 // Take a screenshot and save it into screen.png
 //                 // driver.GetScreenshot().SaveAsFile(@"screen.png", ScreenshotImageFormat.Png);
