@@ -1,8 +1,9 @@
 using Microsoft.AspNetCore.Identity;
 
-namespace WebScraperApp.Controllers
+namespace WebScraperApp.Models
 {
     public class ApplicationUser : IdentityUser
     {
+        
     }
 }

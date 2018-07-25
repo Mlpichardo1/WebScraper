@@ -12,6 +12,7 @@ using Microsoft.EntityFrameworkCore;
 using WebScraperApp.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using WebScraperApp.Services;
 
 namespace WebScraperApp
 {
@@ -33,6 +34,8 @@ namespace WebScraperApp
                 options.CheckConsentNeeded = context => true;
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
+
+            services.AddScoped<IStockItemService, StockItemService>();
 
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlite(
