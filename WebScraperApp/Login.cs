@@ -18,7 +18,6 @@ namespace WebScraperApp
 {
     public partial class Login
     {
-        [Authorize]
         public static void Run(string[] args)
         {
             System.Console.WriteLine("Button Clicked");

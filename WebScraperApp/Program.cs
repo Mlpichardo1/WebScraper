@@ -28,7 +28,6 @@ namespace WebScraperApp
                 var services = scope.ServiceProvider;
                 try
                 {
-                    SeedData.InitializeAsync(services).Wait();
                 }
                 catch (Exception ex)
                 {

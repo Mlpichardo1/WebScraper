@@ -30,6 +30,8 @@ namespace WebScraperApp.Services
             _context.Items.Add(newItem);
             var saveResult = await _context.SaveChangesAsync();
             return saveResult == 1;
+
+            
         }
 
         public async Task<bool> MarkDoneAsync(Guid id)

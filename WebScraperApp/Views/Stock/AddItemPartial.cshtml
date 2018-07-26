@@ -1,6 +1,14 @@
 @model StockItem
+<head runat="server"></head>
 <form asp-action="StockItem" method="POST">
 <label asp-for="Title">Scrape Yahoo!</label>
 <input asp-for="Title">
-<button type="submit">Scrape</button>
+<button type="submit">Add</button>
 </form>
+
+<!-- @model Login
+<form asp-controller="Snapshots" asp-action="TriggerSnapshot" method="POST">
+    <label>Take a new snapshot of your portfolio by clicking the button below</label>
+    <br>
+    <button class="btn btn-success" type="submit">Snapshot</button>
+</form> -->
