@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "e1911c7509365132404cd003d84eaea5dbc32367"
+    "signature": "d20ecfc73ebcf53ed93fed2e1238744596c82a58"
   },
   "compilationOptions": {
     "defines": [
@@ -33,6 +33,7 @@
           "Microsoft.NETCore.App": "2.1.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.1.0",
           "Selenium.Chrome.WebDriver": "2.40.0",
+          "Selenium.Firefox.WebDriver": "0.21.0",
           "Selenium.Support": "3.12.1",
           "Selenium.WebDriver": "3.12.1",
           "bootstrap": "4.1.1"
@@ -931,6 +932,7 @@
       },
       "popper.js/1.14.0": {},
       "Selenium.Chrome.WebDriver/2.40.0": {},
+      "Selenium.Firefox.WebDriver/0.21.0": {},
       "Selenium.Support/3.12.1": {
         "dependencies": {
           "Selenium.WebDriver": "3.12.1"
@@ -4680,6 +4682,13 @@
       "sha512": "sha512-T/RDPvialS0tk6W1ZRoPy/uFNgbEgW+YJplNQByyE9URhhHszJqPu+IIbK0Htgky5R8WjppUwjrxxiFeu73cXw==",
       "path": "selenium.chrome.webdriver/2.40.0",
       "hashPath": "selenium.chrome.webdriver.2.40.0.nupkg.sha512"
+    },
+    "Selenium.Firefox.WebDriver/0.21.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-BktTpRQBLpAaNM51jJDOKn9AhK/fMSQJwR3mm5UOjJN9XPPZQK/AzojQat4/L9+L1c4aiWMchtljzUwL4WGK1Q==",
+      "path": "selenium.firefox.webdriver/0.21.0",
+      "hashPath": "selenium.firefox.webdriver.0.21.0.nupkg.sha512"
     },
     "Selenium.Support/3.12.1": {
       "type": "package",

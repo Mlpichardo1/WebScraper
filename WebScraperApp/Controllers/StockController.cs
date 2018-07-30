@@ -1,8 +1,11 @@
 using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using OpenQA.Selenium.Chrome;
 using WebScraperApp.Models;
 using WebScraperApp.Services;
 
@@ -17,6 +20,7 @@ namespace WebScraperApp.Controllers
             {
                 _stockItemService = stockItemService;
             }
+
         public async Task<IActionResult> Index()
         {
             var items = await _stockItemService.GetIncompleteItemsAsync();
@@ -40,6 +44,8 @@ namespace WebScraperApp.Controllers
                 return BadRequest("Could not add item.");
             }
             return RedirectToAction("Index");
+
+            
         }
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> MarkDone(Guid id)

@@ -6,6 +6,8 @@ using WebScraperApp.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Identity;
 using WebScraperApp.Controllers;
+using OpenQA.Selenium.Chrome;
+using OpenQA.Selenium.Firefox;
 
 namespace WebScraperApp.Services
 {
@@ -24,14 +26,35 @@ namespace WebScraperApp.Services
         }
         public async Task<bool> AddItemAsync(StockItem newItem)
         {
+            using (var driver = new FirefoxDriver())
+            {
+                System.Console.WriteLine("Selenium is running");
+                // Go to the home page
+                driver.Navigate().GoToUrl("https://login.yahoo.com/");
+
+                // Get the page elements
+                var userName = driver.FindElementById("login-username");
+                var userLogin = driver.FindElementById("login-signin");
+                var userPassword = driver.FindElementById("login-passwd");
+                var userPort = driver.FindElementById("");
+                
+                // Type user name and password
+                userName.SendKeys("mnl.pichardo@yahoo.com");
+                userLogin.Click();
+                userPassword.SendKeys("Milkman0");
+                // Login 
+                userLogin.Click();
+                userPort.Click();
+
+                System.Console.WriteLine("Selenium is running");
+            }
+            
             newItem.Id = Guid.NewGuid();
             newItem.IsDone = false;
             newItem.DueAt = DateTimeOffset.Now.AddDays(3);
             _context.Items.Add(newItem);
             var saveResult = await _context.SaveChangesAsync();
             return saveResult == 1;
-
-            
         }
 
         public async Task<bool> MarkDoneAsync(Guid id)
